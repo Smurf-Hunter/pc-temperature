@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Components</title>
+</head>
+<body>
+<br/><br/><br/>
+    Found CPU Component : <p id="cpu" th:text="${cpu}"></p>
+    <br/><br/>
+    Found GPU Component : <p id="gpu" th:text="${gpu}"></p>
+    <br/><br/><br/>
+
+IT MAY TAKE SOME FEW SECONDS TO LOAD
+<br/>
+<br/>
+<div th:if="${cpu!='Found no CPU'}">
+<a href="/cpu"><input id="cpubutton" type="button" value="CPU details" /></a>
+</div>
+<br/><br/>
+<div th:if="${gpu!='Found no GPU'}">
+<a href="/gpu"><input id="gpubutton" type="button" value="GPU details" /></a>
+</div>
+
+<a href = "/exit"><input type = button value = "EXIT"/></a>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>CPU Details</title>
+</head>
+<body>
+<h4>CPU DETAILS</h4>
+<br/>
+<br/>
+
+<a href = "/"><input type = button value = "HOME"/></a>
+
+<a href = "/cpu"><input type = button value = "REFRESH"/></a>
+
+<br/>
+<br/>
+
+<h5>CPU SENSORS TEMP : </h5>
+<br/>
+
+<table>
+    <thead>
+    <tr>
+        <th> Name </th>
+        <th> Value </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cpuTemps.empty}">
+        <td colspan="2"> No CPUs Available </td>
+    </tr>
+    <tr th:each="cpuTemps : ${cpuTemps}">
+        <td><span th:text="${cpuTemps.name}"> Title </span></td>
+        <td><span th:text="${cpuTemps.value}"> Author </span></td>
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+<br/>
+<h5>CPU FAN SPEEDS</h5>
+<br/>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th> Name </th>
+        <th> Value </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cpuFans.empty}">
+        <td colspan="2"> No CPU Fans Available </td>
+    </tr>
+    <tr th:each="cpuFans : ${cpuFans}">
+        <td><span th:text="${cpuFans.name}"> Title </span></td>
+        <td><span th:text="${cpuFans.value}"> Author </span></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<br/>
+<h5>CPU LOADS</h5>
+<br/>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th> Name </th>
+        <th> Value </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cpuLoads.empty}">
+        <td colspan="2"> No CPU Loads Data Available </td>
+    </tr>
+    <tr th:each="cpuLoads : ${cpuLoads}">
+        <td><span th:text="${cpuLoads.name}"> Title </span></td>
+        <td><span th:text="${cpuLoads.value}"> Author </span></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<br/>
+
+</body>
+</html>
