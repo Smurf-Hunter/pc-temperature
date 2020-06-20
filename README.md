@@ -7,6 +7,6 @@ This application runs on http://localhost:4200/. If ur temperature of cpus and g
 1. run cmd as administrator.
 2. navigate to the jar file .
 3. type "java -jar temperature-dekhlo-fraands-0.0.1-SNAPSHOT.jar" .
-And that's runs your application perfectly fine:)
+And that runs your application perfectly fine:)
 
 kindly get me a feedback :)
